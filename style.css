@@ -1,0 +1,204 @@
+/* core.css */
+/* lean and simple css reset, based on Tantek Celik's reset - see comments below. */
+/* (c) 2004-2010 Tantek Çelik. Some Rights Reserved. http://tantek.com */
+/* This style sheet is licensed under a Creative Commons License.      */
+/*             http://creativecommons.org/licenses/by/2.0              */
+
+/* Purpose: undo some of the default styling of common browsers        */
+@font-face {
+  font-family: "arcade";
+  src: url("assets/font/ARCADE_I.TTF") /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+  font-family: "invaders";
+  src: url("assets/font/INVADERS.TTF") /* TTF file for CSS3 browsers */
+}
+
+:link, :visited, ins {
+  text-decoration: none
+}
+
+nav ul, nav ol {
+  list-style: none
+}
+
+dl, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+html, body, pre, p, blockquote,
+form, fieldset, input, label {
+  margin: 0;
+  padding: 0
+}
+
+abbr, img, object,
+a img, :link img, :visited img,
+a object, :link object, :visited object {
+  border: 0
+}
+
+address, abbr {
+  font-style: normal
+}
+
+iframe:not(.auto-link) {
+  display: none ! important;
+  visibility: hidden ! important;
+  margin-left: -10000px ! important
+}
+
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #005580;
+  text-decoration: underline;
+}
+
+canvas {
+  margin: auto;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.trophy {
+  display: none;
+  color: #fff;
+}
+
+#starfield {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: opacity 3s linear;
+}
+
+#gamecontainer {
+  width: 600px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#gamecanvas {
+  width: 600px;
+  height: 600px;
+}
+
+#info {
+  display: none;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+body {
+  font-family: "arcade", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+@media all and (min-width: 300px) {
+  #gameCanvas {
+    transform: scale(1);
+  }
+}
+
+@media all and (min-width: 500px) {
+  #gameCanvas {
+    transform: scale(1);
+  }
+}
+
+@media all and (min-width: 800px) {
+  #gameCanvas {
+    transform: scale(1.5);
+  }
+}
+
+#resume {
+  background-color: black;
+  font-family: arial SansSerif;
+  color: grey;
+  overflow-x: scroll;
+  width: 100vw;
+  opacity: 0;
+  transition: opacity 3s linear;
+}
+
+
+.header, .footer {
+  padding: 20px 0;
+  background-color: #000;
+}
+
+.header {
+  border-bottom: 1px solid grey;
+}
+
+.footer {
+  border-top: 1px solid grey;
+}
